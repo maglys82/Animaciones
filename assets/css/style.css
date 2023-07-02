@@ -1,23 +1,23 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     font-family: roboto;
 }
 
 
-.menu{
-   
-   display: flex;
-   list-style: none;
-   gap: 10px;
-   padding-right: 20px;
+.menu {
+
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding-right: 20px;
 }
 
-.seccion-title{
+.seccion-title {
     display: flex;
 }
 
-header{
+header {
 
     grid-area: menu;
     display: flex;
@@ -26,13 +26,13 @@ header{
     background-color: rgb(48, 120, 54);
     color: white;
     font-size: 1.2rem;
-    
+
 }
 
 
 body {
     display: grid;
-    grid-template-rows: 70px  15fr 1fr;
+    grid-template-rows: 70px 15fr 1fr;
     grid-template-areas:
         "menu"
         "seccion-principal"
@@ -40,7 +40,7 @@ body {
 }
 
 
-svg{
+svg {
     width: 50px;
     padding-left: 10px;
     transform: rotate(0deg);
@@ -49,69 +49,96 @@ svg{
 }
 
 
-svg:hover{
+svg:hover {
     transform: rotate(45deg);
 
 }
 
 
 
-main{
-    grid-area:seccion-principal;
+main {
+    grid-area: seccion-principal;
 
 }
 
 
-footer{
-    grid-area:pie-de-pagina;
+footer {
+    grid-area: pie-de-pagina;
     display: flex;
     justify-content: center;
     padding-top: 10px;
-    
+
 }
 
 
-.seccion-principal{
+.seccion-principal {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 1rem 2rem 0.8rem 2rem;
-    
+
 }
 
-.seccion-principal img{
+.seccion-principal img {
     width: 50%;
     background-position: center center;
     background-repeat: no-repeat;
     filter: grayscale(100%);
     transition: filter 0.5s ease;
-    
+
 }
 
 
-.seccion-principal img:hover{
-    filter: grayscale(0%); 
-    
+.seccion-principal img:hover {
+    filter: grayscale(0%);
+
 }
 
 @media (min-width: 576px) {
-    .seccion-principal{
-        flex-direction: row; 
-        gap: 10px; 
+    .seccion-principal {
+        flex-direction: row;
+        gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
-        
-        
+
+
     }
 
-    h3{
+    body {
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-areas:
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "pie-de-pagina seccion-principal";
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding-top: 1rem;
+    }
+
+    .menu{
+        flex-direction: column;
+
+    }
+
+    h3 {
         font-size: 1rem;
     }
 
-    .seccion-principal img{
+    .seccion-principal img {
         width: 100%;
 
 
     }
-} 
 
+    footer{
+        background-color: grey;
+    }
+}
